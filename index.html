@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokument</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Montserrat:wght@400;700&family=Open+Sans:wght@300;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://api.ssps.cajthaml.eu/file/64d9f18f79dad891e8a07c73">
+
+    <style>
+        body{
+            background-image: url("https://storage.googleapis.com/businessinfo_cz/2019/12/5dcdeffa-karluv-most-praha-turismus-shutterstock_1033106005-scaled.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            font-family: Roboto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .weather-container{
+            display: flex;
+            flex-direction: column;
+        }
+        .basic-info{
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(255, 255, 255, 0.8);
+            align-items: center;
+            padding-left: 100px;
+            padding-right: 100px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        .cloud-image{
+            height: 100px;
+        }
+        .temperature-info{
+            display: flex;
+        }
+        .temp-high{
+            font-size: 23px;
+            margin-right: 40px;
+        }
+        .temp-low{
+            font-size: 23px;
+            color: rgb(0, 162, 255);
+        }
+        .city-name{
+            font-size: 50px;
+            font-weight: 500; 
+            margin-top: 25px;
+        }
+        .other-days-info{
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            padding: 20px;
+        }
+        .weather-day{
+            border-right: 1px solid rgb(193, 193, 193);
+            padding-right: 20px;
+        }
+        .day{
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .degrees{
+            font-size: 20px;
+        }
+        .today-info{
+            display: flex;
+        }
+        .today-weather{
+            display: flex;
+            flex-direction: column;
+        }
+        .temperature-today{
+            background-color: rgb(37, 37, 37);
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 40px;
+            padding-bottom: 60px;
+        }
+        .today-degrees{
+            color: white;
+            font-size: 60px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .time-update{
+            color: gray;
+            font-weight: 500;
+        }
+        .wind-today{
+            display: flex;
+            justify-content: space-around;
+            background-color: rgba(234,143,69,0.9);
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        .wind-speed{
+            color: white;
+            font-weight: 500;
+            font-size: 23px;
+        }
+        @media only screen and (max-width: 564px){
+            .wind-today{
+                padding-top: 18px;
+                padding-bottom: 18px;
+            } 
+        }
+        @media only screen and (max-width: 474px){
+            .today-info{
+                flex-direction: column;
+            }
+            .temperature-today{
+                padding-top: 20px;
+                padding-bottom: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+            .wind-today{
+                justify-content: space-between;
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+            .today-degrees{
+                margin-bottom: 0;
+            } 
+        }
+        @media only screen and (max-width: 396px){
+            .weather-day{
+                padding-right: 0;
+            }
+        }
+        @media only screen and (max-width: 332px){
+            .basic-info{
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+            .temperature-today{
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .wind-today{
+                padding-left: 15px;
+                padding-right: 15px; 
+            }
+            .other-days-info{
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+        @media only screen and (max-height: 470px){
+            body{
+                align-items: normal;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <article class="weather-container">
+        <section class="today-info">
+            <section class="basic-info">
+                    <!--Mrak je selfmade, proto jsem ho posílal na discord, abych měl odkaz.-->
+                    <img class="cloud-image" src="https://cdn.discordapp.com/attachments/776392366072266766/1175526945593770116/image.png?ex=656b8dc8&is=655918c8&hm=2c602aa7abcfa606563780d19b052f1f1e5459b8205cf38068b594558042823d&" alt="">
+                <div class="temperature-info">
+                    <p class="temp-high">V: 5°C</p>
+                    <p class="temp-low">N: -2°C</p>
+                </div>
+                <p class="city-name">Praha</p>
+            </section>
+            <section class="today-weather">
+                <div class="temperature-today">
+                    <p class="today-degrees">4°C</p>
+                    <p class="time-update">Aktualizováno: 15:34</p>
+                </div>
+                <div class="wind-today">
+                    <p class="wind-speed">15%</p>
+                    <p class="wind-speed">10km/h</p>
+                </div>
+            </section>
+        </section>
+        <section class="other-days-info">
+            <div class="weather-day">
+                <p class="day">PON</p>
+                <p class="degrees">3°C</p>
+            </div>
+            <div class="weather-day">
+                <p class="day">ÚTE</p>
+                <p class="degrees">5°C</p>
+            </div>
+            <div class="weather-day">
+                <p class="day">STŘ</p>
+                <p class="degrees">8°C</p>
+            </div>
+            <div class="weather-day">
+                <p class="day">ČTV</p>
+                <p class="degrees">8°C</p>
+            </div>
+            <div class="weather-day">
+                <p class="day">PÁT</p>
+                <p class="degrees">-2°C</p>
+            </div>
+            <div class="weather-day">
+                <p class="day">SOB</p>
+                <p class="degrees">0°C</p>
+            </div>
+            <div>
+                <p class="day">NED</p>
+                <p class="degrees">5°C</p>
+            </div>
+        </section>
+    </article>
+</body>
+</html>
